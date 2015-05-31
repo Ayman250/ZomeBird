@@ -14,6 +14,5 @@ public class AndroidLauncher extends AndroidApplication {
 		AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
 
 		initialize(new ZBGame(), config);
-//POGMAEOIJGo
 	}
 }

@@ -2,7 +2,7 @@ package com.mygdx.gameworld;
 
 import com.badlogic.gdx.Gdx;
 
-import java.awt.Rectangle;
+import com.badlogic.gdx.math.Rectangle;
 
 /**
  * Created by Ayman on 5/22/2015.
