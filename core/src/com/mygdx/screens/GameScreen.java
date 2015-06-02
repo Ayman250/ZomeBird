@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.mygdx.gameworld.GameRender;
 import com.mygdx.gameworld.GameWorld;
+import com.mygdx.zbhelpers.InputHandler;
 
 /**
  * Created by Ayman on 5/16/2015.
@@ -13,9 +14,18 @@ public class GameScreen implements Screen{
     private GameWorld world;
     private GameRender renderer;
     public GameScreen(){
-        Gdx.app.log("GameScreen", "Attached");
-        world = new GameWorld();
+
+        float screenWidth = Gdx.graphics.getWidth();
+        float screenHeight = Gdx.graphics.getHeight();
+        float gameWidth = 136;
+        float gameHeight = screenHeight / (screenWidth/gameWidth);
+
+        int midpOintY = (int)(gameHeight/2);
+
+        world = new GameWorld(midpOintY);
         renderer = new GameRender(world);
+
+        Gdx.input.setInputProcessor(new InputHandler(world.getBird()));
 
     }
     @Override
