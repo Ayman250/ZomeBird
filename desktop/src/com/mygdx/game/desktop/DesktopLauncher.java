@@ -6,12 +6,13 @@ import com.mygdx.game.ZBGame;
 import com.mygdx.game.ZombieBirdGame;
 
 public class DesktopLauncher {
-	public static void main (String[] arg) {
-		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-        config.title = "Zombie Bird";
-        config.width = 272;
-        config.height = 408;
-        config.title = "Zeombie Bird";
-        new LwjglApplication(new ZBGame(), config);
-	}
+    public static void main(String[] args) {
+        LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
+        cfg.title = "ZombieBird";
+        cfg.useGL30 = false;
+        cfg.width = 272;
+        cfg.height = 408;
+
+        new LwjglApplication(new ZBGame(), cfg);
+    }
 }
